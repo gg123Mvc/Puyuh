@@ -8,12 +8,24 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 
 // Fallback to prevent crash if env vars are missing
-const url = supabaseUrl || 'https://cusmwcirycfhxhlypbey.supabase.co'
-const key = supabaseAnonKey || 'sb_publishable_zU8xOVm8XHB6voOK6FNTyw_zHJNKSGb'
+const url = supabaseUrl
+const key = supabaseAnonKey
 
 console.log('Supabase Config:', { 
-  url: supabaseUrl ? 'Found in ENV' : 'Using Placeholder', 
+  url: supabaseUrl ? 'Found in ENV' : 'Missing', 
   hasKey: !!supabaseAnonKey 
 })
 
-export const supabase = createClient(url, key)
+let supabase = null
+
+try {
+  if (url && key) {
+    supabase = createClient(url, key)
+  } else {
+    console.warn('Supabase credentials missing! Auth features will be disabled.')
+  }
+} catch (error) {
+  console.error('Failed to initialize Supabase client:', error)
+}
+
+export { supabase }
