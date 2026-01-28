@@ -17,7 +17,7 @@ export default defineConfig({
       },
     },
   },
-  base: './', // Use relative base for simple static hosting compatibility
+base: '/Puyuh/',
   build: {
     rollupOptions: {
       input: {
