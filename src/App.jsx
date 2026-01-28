@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import Layout from "./Layout"
 import Profile from "./Profile"
 import Services from "./Services"
+import Home from "./Home"
 
 // ADMIN
 import ProtectRoute from "./auth/ProtectRoute"
