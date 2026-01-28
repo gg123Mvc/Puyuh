@@ -17,22 +17,29 @@ export default function Register() {
     setLoading(true)
     setError(null)
     
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: {
-          full_name: fullName,
-        },
-      },
-    })
+    try {
+      if (!supabase) {
+        throw new Error("Koneksi database belum diatur (missing credentials).")
+      }
 
-    if (error) {
-      setError(error.message)
-      setLoading(false)
-    } else {
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            full_name: fullName,
+          },
+        },
+      })
+
+      if (error) throw error
+      
       alert('Registrasi berhasil! Silakan cek email untuk verifikasi (jika diaktifkan) atau langsung login.')
       navigate('/admin/login')
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
     }
   }
 

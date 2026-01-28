@@ -16,16 +16,23 @@ export default function Login() {
     setLoading(true)
     setError(null)
     
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    })
+    try {
+      if (!supabase) {
+        throw new Error("Koneksi database belum diatur (missing credentials).")
+      }
 
-    if (error) {
-      setError(error.message)
-      setLoading(false)
-    } else {
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      })
+
+      if (error) throw error
+      
       navigate('/admin/dashboard')
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
     }
   }
 

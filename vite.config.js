@@ -5,8 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   esbuild: {
-    loader: 'js',
-    include: /src\/.*\.jsx?$/,
+    loader: 'jsx',
+    include: /src\/.*\.js$/, // Match .js files in src
     exclude: [],
   },
   optimizeDeps: {
@@ -16,5 +16,5 @@ export default defineConfig({
       },
     },
   },
-  base: '/puyuh',
+  base: '/puyuh/',
 })
