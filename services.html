@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./src/assets/puyuh.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layanan - Peternakan Burung Puyuh</title>
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/App.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav className="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="./src/assets/puyuh.png" alt="Logo" style="height: 40px;">
+                <span>PuyuhTerpadu</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="services.html" class="nav-link active">Produk & Layanan</a>
+                <a href="profile.html" class="nav-link">Profil</a>
+                <a href="contact.html" class="btn" style="padding: 8px 20px; font-size: 0.9rem; margin-left:10px;">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="header" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 120px 0 60px; text-align: center; color: white;">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Produk & Layanan</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">
+                Solusi Agribisnis Puyuh Terpadu & Berstandar Industri
+            </p>
+        </div>
+    </header>
+
+    <!-- PRODUK -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title">Produk Utama</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon"><i data-lucide="egg" style="width:32px; height:32px;"></i></div>
+                    <h3>Telur Puyuh Konsumsi</h3>
+                    <p>Telur puyuh segar dengan standar kebersihan tinggi, cocok untuk kebutuhan rumah tangga, UMKM, dan industri pangan.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i data-lucide="bird" style="width:32px; height:32px;"></i></div>
+                    <h3>Bibit & Indukan Puyuh</h3>
+                    <p>Bibit dan indukan puyuh unggul dengan performa produksi optimal, sehat, dan terkontrol.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i data-lucide="wheat" style="width:32px; height:32px;"></i></div>
+                    <h3>Pakan & Nutrisi</h3>
+                    <p>Rekomendasi pakan dan formulasi nutrisi untuk meningkatkan produktivitas dan efisiensi ternak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYANAN -->
+    <section class="section" style="background: #f8fafc">
+        <div class="container">
+            <h2 class="title">Layanan Kami</h2>
+            <div class="grid-3">
+                <div class="feature-item" style="text-align:center; background:white; padding:30px; border-radius:16px; box-shadow:var(--shadow);">
+                    <div style="margin-bottom:20px; color:var(--primary); background:rgba(37,99,235,0.1); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <strong>Pendampingan Teknis Peternakan</strong>
+                </div>
+                <div class="feature-item" style="text-align:center; background:white; padding:30px; border-radius:16px; box-shadow:var(--shadow);">
+                    <div style="margin-bottom:20px; color:var(--primary); background:rgba(37,99,235,0.1); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;">
+                        <i data-lucide="badge-dollar-sign"></i>
+                    </div>
+                    <strong>Program Kemitraan Peternak</strong>
+                </div>
+                <div class="feature-item" style="text-align:center; background:white; padding:30px; border-radius:16px; box-shadow:var(--shadow);">
+                    <div style="margin-bottom:20px; color:var(--primary); background:rgba(37,99,235,0.1); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <strong>Konsultasi Manajemen Produksi</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="text-align:center;">
+                <h2 style="margin-bottom: 20px">Peternakan Puyuh Terpadu</h2>
+                <div style="margin-bottom: 30px">
+                    <a href="#" style="margin:0 10px; color:white;"><i data-lucide="facebook"></i></a>
+                    <a href="#" style="margin:0 10px; color:white;"><i data-lucide="instagram"></i></a>
+                    <a href="#" style="margin:0 10px; color:white;"><i data-lucide="twitter"></i></a>
+                </div>
+                <div style="margin-bottom: 20px">
+                    <a href="/admin/login" style="color: var(--gray); font-size: 0.9rem; text-decoration: underline">Login Admin</a>
+                </div>
+            </div>
+            <div class="footer-copy" style="text-align:center; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1);">
+                <p>© 2026 Peternakan Burung Puyuh Terpadu | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -13,17 +13,16 @@ import Dashboard from "./pages/admin/Dashboard"
 import KandangManager from "./pages/admin/KandangManager"
 import PembelianManager from "./pages/admin/PembelianManager"
 import PakanManager from "./pages/admin/PakanManager"
+import TelurManager from "./pages/admin/TelurManager"
+import InkubatorManager from "./pages/admin/InkubatorManager"
 
 export default function App() {
   return (
     <Routes>
 
-      {/* PUBLIC */}
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="services" element={<Services />} />
-      </Route>
+      {/* REACT APP IS NOW ONLY FOR ADMIN */}
+      {/* Redirect root to login */}
+      <Route path="/" element={<Navigate to="/admin/login" replace />} />
 
       {/* AUTH */}
       <Route path="/admin/login" element={<Login />} />
@@ -37,11 +36,13 @@ export default function App() {
           <Route path="kandang" element={<KandangManager />} />
           <Route path="pembelian" element={<PembelianManager />} />
           <Route path="pakan" element={<PakanManager />} />
+          <Route path="telur" element={<TelurManager />} />
+          <Route path="inkubator" element={<InkubatorManager />} />
         </Route>
       </Route>
 
-      {/* NOT FOUND */}
-      <Route path="*" element={<Navigate to="/" replace />} />
+      {/* NOT FOUND - Redirect to Admin Login */}
+      <Route path="*" element={<Navigate to="/admin/login" replace />} />
 
     </Routes>
   )

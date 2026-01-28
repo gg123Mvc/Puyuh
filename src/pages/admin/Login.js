@@ -3,8 +3,10 @@ import { useNavigate, Link } from 'react-router-dom'
 import { supabase } from '../../supabaseClient'
 import { motion } from 'framer-motion'
 import { Lock, Mail } from 'lucide-react'
+import { useToast } from '../../components/Toast'
 
 export default function Login() {
+  const { showToast } = useToast()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -28,6 +30,7 @@ export default function Login() {
 
       if (error) throw error
       
+      showToast('Selamat Datang di Puyuh Admin! 🚀', 'success')
       navigate('/admin/dashboard')
     } catch (err) {
       setError(err.message)

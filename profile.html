@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./src/assets/puyuh.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - Peternakan Burung Puyuh</title>
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/App.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav className="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="./src/assets/puyuh.png" alt="Logo" style="height: 40px;">
+                <span>PuyuhTerpadu</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="services.html" class="nav-link">Produk & Layanan</a>
+                <a href="profile.html" class="nav-link active">Profil</a>
+                <a href="contact.html" class="btn" style="padding: 8px 20px; font-size: 0.9rem; margin-left:10px;">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="section" style="padding-top: 120px; padding-bottom: 40px; text-align: center;">
+        <div class="container">
+            <h2 class="title">Tentang Kami</h2>
+            <p style="font-size: 1.2rem; color: var(--gray); line-height: 1.8; max-width: 800px; margin: 0 auto;">
+              Peternakan Burung Puyuh Terpadu adalah perusahaan agribisnis yang bergerak
+              di bidang produksi telur puyuh, bibit unggul, serta pengembangan sistem
+              peternakan modern dan berkelanjutan.
+            </p>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section" style="background: #f0f9ff">
+        <div class="container">
+            <h2 class="title">Tim Kami</h2>
+            <div class="grid-3">
+                <!-- Team Member 1 -->
+                <div class="team-card" style="background:white; padding:30px; border-radius:20px; text-align:center; box-shadow:var(--shadow);">
+                    <div style="width:120px; height:120px; margin:0 auto 20px; border-radius:50%; overflow:hidden; border:4px solid #eff6ff;">
+                        <img src="./src/assets/team/ceo.jpeg" alt="CEO" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h3 style="margin-bottom:4px">Ahmad Pratama</h3>
+                    <p style="color:var(--primary); font-weight:600;">Founder & CEO</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="team-card" style="background:white; padding:30px; border-radius:20px; text-align:center; box-shadow:var(--shadow);">
+                    <div style="width:120px; height:120px; margin:0 auto 20px; border-radius:50%; overflow:hidden; border:4px solid #eff6ff;">
+                        <img src="./src/assets/team/coo.jpg" alt="COO" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h3 style="margin-bottom:4px">Siti Nurhaliza</h3>
+                    <p style="color:var(--primary); font-weight:600;">Co-Founder & COO</p>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="team-card" style="background:white; padding:30px; border-radius:20px; text-align:center; box-shadow:var(--shadow);">
+                    <div style="width:120px; height:120px; margin:0 auto 20px; border-radius:50%; overflow:hidden; border:4px solid #eff6ff;">
+                        <img src="./src/assets/team/director.jpg" alt="Director" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h3 style="margin-bottom:4px">Budi Santoso</h3>
+                    <p style="color:var(--primary); font-weight:600;">Director of Production</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISI MISI -->
+    <section class="section">
+        <div class="container grid-3">
+            <div class="card" style="grid-column: span 1;">
+                <h3>Visi</h3>
+                <p>Menjadi perusahaan peternakan burung puyuh yang unggul, modern, dan berdaya saing nasional serta global.</p>
+            </div>
+            <div class="card" style="grid-column: span 2; text-align: left;">
+                <h3 style="text-align: center;">Misi</h3>
+                <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; list-style:none;">
+                    <li style="background:#f8fafc; padding:12px; border-radius:8px; font-weight:500;">✅ Menghasilkan produk puyuh berkualitas</li>
+                    <li style="background:#f8fafc; padding:12px; border-radius:8px; font-weight:500;">✅ Peternakan berbasis teknologi</li>
+                    <li style="background:#f8fafc; padding:12px; border-radius:8px; font-weight:500;">✅ Kemitraan berkelanjutan</li>
+                    <li style="background:#f8fafc; padding:12px; border-radius:8px; font-weight:500;">✅ Ramah lingkungan</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="text-align:center;">
+                <h2 style="margin-bottom: 20px">Peternakan Puyuh Terpadu</h2>
+                <div style="margin-bottom: 30px">
+                    <a href="#" style="margin:0 10px; color:white;"><i data-lucide="facebook"></i></a>
+                    <a href="#" style="margin:0 10px; color:white;"><i data-lucide="instagram"></i></a>
+                    <a href="#" style="margin:0 10px; color:white;"><i data-lucide="twitter"></i></a>
+                </div>
+                <div style="margin-bottom: 20px">
+                    <a href="/admin/login" style="color: var(--gray); font-size: 0.9rem; text-decoration: underline">Login Admin</a>
+                </div>
+            </div>
+            <div class="footer-copy" style="text-align:center; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1);">
+                <p>© 2026 Peternakan Burung Puyuh Terpadu | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

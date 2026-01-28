@@ -3,8 +3,10 @@ import { useNavigate, Link } from 'react-router-dom'
 import { supabase } from '../../supabaseClient'
 import { motion } from 'framer-motion'
 import { Lock, Mail, User } from 'lucide-react'
+import { useToast } from '../../components/Toast'
 
 export default function Register() {
+  const { showToast } = useToast()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [fullName, setFullName] = useState('')
@@ -34,7 +36,7 @@ export default function Register() {
 
       if (error) throw error
       
-      alert('Registrasi berhasil! Silakan cek email untuk verifikasi (jika diaktifkan) atau langsung login.')
+      showToast('Registrasi berhasil! Silakan Login.', 'success')
       navigate('/admin/login')
     } catch (err) {
       setError(err.message)
